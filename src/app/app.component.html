@@ -1,0 +1,79 @@
+<div fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
+  <mat-toolbar color="primary">
+    <span class="toolbarName">Meghana Madineni</span>
+    <span fxFlex></span>
+    <button mat-icon-button mat-tooltip='Home' tooltip-position='below'>
+      <mat-icon>
+        <a class="noDeco" href="#home">home</a>
+      </mat-icon>
+    </button>
+    <button mat-icon-button mat-tooltip='Work' tooltip-position='below'>
+      <mat-icon>
+        <a class="noDeco" href="#work">work</a>
+      </mat-icon>
+    </button>
+    <button mat-icon-button mat-tooltip='Contact' (click)="openAdminDialog()" tooltip-position='below'>
+      <mat-icon>message</mat-icon>
+    </button>
+    <button mat-icon-button mat-tooltip='Resume' tooltip-position='below'>
+      <mat-icon>
+        <a class="noDeco" download="meghana_resume.pdf" [href]="filePath">file_download</a>
+      </mat-icon>
+    </button>
+    <button mat-icon-button (click)="toggleTheme()" mat-tooltip='Toggle Theme' tooltip-position='below'>
+      <mat-icon>swap_horiz</mat-icon>
+    </button>
+  </mat-toolbar>
+  <mat-sidenav-container fxFlex>
+    <div class="content" fxLayoutGap="16px" layout-align="center center" fxFlexAlign="center center">
+      <div id="home"></div>
+      <mat-card fxFlex="100" class="outer" layout-align="center center">
+        <img [src]="fullImagePath" class="avatar" />
+        <div class="block">
+          <p class="intense">Logically Creative Thinker</p>
+          <p class="intro"> {{intro}}</p>
+          <mat-list>
+            <mat-divider ng-if="!$last"></mat-divider>
+          </mat-list>
+          <div id="work"></div>
+          <p class="intense">Professional Experience</p>
+          <table class="tableWidth">
+            <tr>
+              <td>
+                <img [src]="calogo" />
+              </td>
+              <td>
+                <p class="size">{{prof_exp}}</p>
+              </td>
+            </tr>
+          </table>
+          <mat-list>
+            <mat-divider ng-if="!$last"></mat-divider>
+          </mat-list>
+          <p class="intense">Academic Projects</p>
+          <div *ngFor="let project of projects;">
+            <span class="subheading">
+              <a class="noDecoLink" target="_blank" href={{project.link}}>{{project.name}}
+                <img class="git-icon" [src]="gitlogo" />
+              </a>
+            </span>
+            <p class="size">{{project.description}}</p>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+    <button mat-fab class="fab-bottom-right">
+      <mat-icon>
+        <a class="noDeco" href="#home">keyboard_arrow_up</a>
+      </mat-icon>
+    </button>
+  </mat-sidenav-container>
+  <mat-menu #themeMenu x-position="before">
+    <a href="#home">Top</a>
+    <button mat-menu-item (click)="isDarkTheme = !isDarkTheme">Home</button>
+    <button mat-menu-item (click)="isDarkTheme = !isDarkTheme">Background</button>
+    <button mat-menu-item (click)="isDarkTheme = !isDarkTheme">Work</button>
+    <button mat-menu-item (click)="isDarkTheme = !isDarkTheme">Contact</button>
+    <button mat-menu-item (click)="isDarkTheme = !isDarkTheme">Resume</button>
+  </mat-menu>
+</div>

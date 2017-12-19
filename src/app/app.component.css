@@ -1,0 +1,101 @@
+:host {
+  display: flex;
+  flex: 1;
+}
+
+.toolbarName{
+  font-family: gotham rounded,sans-serif;
+  font-weight:bold
+}
+mat-icon{
+  color:white;
+  font:bold;
+}
+.dark-theme .intense{
+color: #ffffff;
+}
+
+.intense{
+  font-family: gotham rounded,sans-serif;
+  color:#678;
+  font-size:36px;
+  font-weight:bold;
+}
+.content {
+  display: block;
+  padding: 0 px;
+  width: 80%;
+  min-width: 700px;
+  margin: 0 auto;
+}
+a.noDeco{
+  text-decoration:none;
+  color:white;
+  font:bold; 
+}
+a.noDecoLink{
+  text-decoration:none;
+  color:#678;
+}
+.intro{
+  text-align: center;
+}
+.dark-theme a.noDecoLink{
+  color:#ffffff;
+}
+.avatar {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: auto auto;
+  display: block;
+  position: relative;
+  margin-top:60px;
+  margin-bottom:70px
+}
+.tableWidth{
+  width: inherit;
+}
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  width: 600px;
+  word-wrap: break-word;
+  text-align: center;
+}
+p.size{
+  width:auto;
+  text-align:justify
+}
+.block{
+   width: 600px;
+  margin: auto;
+  display: block;
+  position: relative;
+
+}
+
+.outer{
+  width:500px;
+  margin: auto auto;
+  display: block;
+  position: relative;
+}
+.fab-bottom-right {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+}
+
+
+
+.subheading{
+  font-family: Helvetica Narrow;font-stretch:narrower;font-size:24px;letter-spacing: 0px;margin-right:5px;
+}
+.git-icon{
+  margin-left: 5px;margin-right: 5px;
+}
+
+
+

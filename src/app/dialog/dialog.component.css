@@ -1,0 +1,33 @@
+.top{
+  margin-top:0px;
+}
+.intense{
+  font-family: gotham rounded,sans-serif;
+  color:#678;
+  font-weight:bold;
+}
+.dark-theme .intense{
+  color: #ffffff;
+}
+.iconStyle{
+  height:32px;
+  width:32px;
+  border:0px
+}
+p .block {
+  text-justify: inter-word;
+  width: 600px;
+  word-wrap: break-word;
+  float:left; 
+  text-align:left;
+}
+a{
+  height:32px;
+  width:32px;
+  text-decoration:none
+}
+a:focus{
+  outline: none;
+}
+
+
