@@ -4,11 +4,7 @@ var mongodb = require("mongodb");
 var ObjectID = mongodb.ObjectID;
 const cors = require('cors');
 var CONTACTS_COLLECTION = "contacts";
-var fs = require('fs');
 
-var tsFile = "./portConf.ts";
-// var file = new File(tsFile);
-// file.open("w");
 var app = express();
 app.use(bodyParser.json());
 app.use(cors());
@@ -31,18 +27,8 @@ mongodb.MongoClient.connect("mongodb://admin:admin@ds113825.mlab.com:13825/websi
   console.log("Database connection ready");
 
   // Initialize the app.
-  var server = app.listen(process.env.PORT || 8080, function () {
+  var server = app.listen(14532, function () {
     var port = server.address().port;
-    fs.writeFile(tsFile, "export class Port {\nnum: number ="+ port+";\n}" , function(err) {
-      if(err) {
-          return console.log(err);
-      }
-      console.log("The file was saved!");
-  }); 
-    // file.write(port);
-    // file.close();
-    // process.env['C'] = port;
-    console.log("App now running on port", process.env.C);
     console.log("App now running on port", port);
   });
 });
