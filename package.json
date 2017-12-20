@@ -4,11 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently --kill-others \"npm run server:run\" \"ng serve --aot --progress=false --proxy-config proxy.conf.json\"",
-    "build": "ng build --prod --sm=false --aot --output-path=dist/client && npm run server:build",
+    "start": "ng serve --aot --progress=false --proxy-config proxy.conf.json",
+    "build": "ng build --prod",
     "test": "ng test",
-    "server:run": "node ./backend/server.js",
-    "server:build": "tsc -p ./backend",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
