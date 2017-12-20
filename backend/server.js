@@ -9,10 +9,11 @@ const contact = require('./controller/contact');
 
 mongoose.Promise = global.Promise;
 //Connect mongoose to our database
-mongoose.connect(config.database, { useMongoClient: true });
+
+mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true });
 
 //Declaring Port
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 //Initialize our app variable
 const app = express();
@@ -25,16 +26,9 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 
-
-/*express.static is a built in middleware function to serve static files.
- We are telling express server public folder is the place to look for the static files
-
-*/
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-
-//Routing all HTTP requests to /bucketlist to bucketlist controller
 app.use('/contact',contact);
 
 
