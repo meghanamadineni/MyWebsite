@@ -10,7 +10,7 @@ export class ContactService {
 
     constructor(private http: Http) { }
 
-    private serverApi= 'http://localhost:8080';
+    private serverApi= 'https://localhost:8080';
 
     
  // post("/api/contacts")
