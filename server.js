@@ -10,10 +10,10 @@ const contact = require('./controller/contact');
 mongoose.Promise = global.Promise;
 //Connect mongoose to our database
 
-mongoose.connect("mongodb://admin:admin@ds113825.mlab.com:13825/website", { useMongoClient: true });
+mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true });
 
 //Declaring Port
-const port =  3000;
+const port =  process.env.PORT || 3000;
 
 //Initialize our app variable
 const app = express();
