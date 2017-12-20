@@ -8,7 +8,6 @@ import {MaterialModule} from './custom-material/custom-material.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {AppComponent} from './app.component';
 import {DialogComponent} from './dialog/dialog.component';
-import {Port} from '../../portConf'
 
 import 'hammerjs';
 
@@ -25,7 +24,7 @@ import 'hammerjs';
     FlexLayoutModule,
     BrowserAnimationsModule,
   ],
-  providers: [Port],
+  providers: [],
   entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
 })
