@@ -13,7 +13,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI, { useMongoClient: true });
 
 //Declaring Port
-const port =  process.env.PORT || 3000;
+const port =  3000;
 
 //Initialize our app variable
 const app = express();
