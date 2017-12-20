@@ -12,6 +12,10 @@
     "postinstall": "npm run build",
     "build": "ng build --prod --sm=false --aot --output-path=dist/client"
   },
+  "engines": {
+    "node": "5.0.0",
+    "npm": "4.6.1"
+    },
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
