@@ -10,7 +10,7 @@ export class ContactService {
 
     constructor(private http: Http, private port:Port) {}
     
-    private serverApi= 'http://localhost:'+this.port.num;
+    private serverApi= 'https://localhost:'+this.port.num;
 
     
 
