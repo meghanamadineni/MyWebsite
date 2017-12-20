@@ -44,6 +44,7 @@ function handleError(res, reason, message, code) {
 
 
 app.post("/contact", function(req, res) {
+  console.log("request came");
   var newContact = req.body;
   newContact.createDate = new Date();
 
