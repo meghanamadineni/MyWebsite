@@ -10,7 +10,7 @@ export class ContactService {
 
     constructor(private http: Http) { }
 
-	PORT = env.get('PORT').required().asIntPositive();
+	PORT = process.env('C');
     private serverApi= 'http://localhost:'+this.PORT;
 
     
