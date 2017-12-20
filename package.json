@@ -4,13 +4,12 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently --kill-others \"npm run server:run\" \"ng serve --aot --progress=false --proxy-config proxy.conf.json\"",
-    "server:run": "node server.js",
+    "start": "node server.js",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "npm run build",
-    "build": "ng build --prod --sm=false --aot --output-path=dist/client"
+    "postinstall": "ng build"
   },
   "engines": {
     "node": "8.9.3",
