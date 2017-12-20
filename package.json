@@ -13,8 +13,8 @@
     "build": "ng build --prod --sm=false --aot --output-path=dist/client"
   },
   "engines": {
-    "node": "5.0.0",
-    "npm": "4.6.1"
+    "node": "8.9.3",
+    "npm": "5.5.1"
     },
   "private": true,
   "dependencies": {
