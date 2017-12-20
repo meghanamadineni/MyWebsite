@@ -3,14 +3,13 @@ import { Http,Headers } from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import { Contact } from '../model/contact'
 import 'rxjs/add/operator/map';
-import {Port}  from '../../../portConf'
 
 @Injectable()
 export class ContactService {
 
-    constructor(private http: Http, private port:Port) {}
+    constructor(private http: Http) {}
     
-    private serverApi= 'http://localhost:'+this.port.num;
+    private serverApi= 'http://localhost:14532';
 
     
 
