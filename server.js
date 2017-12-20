@@ -29,8 +29,8 @@ mongodb.MongoClient.connect("mongodb://admin:admin@ds113825.mlab.com:13825/websi
   // Initialize the app.
   var server = app.listen(process.env.PORT || 8080, function () {
     var port = server.address().port;
-    process.env['PORT'] = port;
-    console.log("App now running on port", process.env.PORT);
+    process.env['C'] = port;
+    console.log("App now running on port", process.env.C);
     console.log("App now running on port", port);
   });
 });
