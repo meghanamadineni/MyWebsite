@@ -9,7 +9,7 @@ export class ContactService {
 
     constructor(private http: Http) {}
     
-    private serverApi= 'http://localhost:14532';
+    private serverApi= 'http://localhost:3000';
 
     
 
@@ -19,7 +19,7 @@ export class ContactService {
   		let headers = new Headers;
   		 let body = JSON.stringify({name: contact.name, email: contact.email, message: contact.message});
   		headers.append('Content-Type', 'application/json');
-  		return this.http.post(URI, body ,{headers: headers})
+  		return this.http.post('/contact', body ,{headers: headers})
   		.map(res => res.json());
   	}
 }
